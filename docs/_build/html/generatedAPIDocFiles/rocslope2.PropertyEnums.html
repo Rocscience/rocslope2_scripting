@@ -1,0 +1,944 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rocslope2.PropertyEnums module &#8212; RocSlope2 Scripting Reference Manual  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'generatedAPIDocFiles/rocslope2.PropertyEnums';</script>
+    <link rel="icon" href="../_static/rocscience_favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="rocslope2.RocSlope2Modeler module" href="rocslope2.RocSlope2Modeler.html" />
+    <link rel="prev" title="rocslope2.Model module" href="rocslope2.Model.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-light" alt="RocSlope2 Scripting Reference Manual  documentation - Home"/>
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-dark pst-js-only" alt="RocSlope2 Scripting Reference Manual  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rocslope2.html">
+    RocSlope2 Package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rocslope2.html">
+    RocSlope2 Package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.analysisResults.html">rocslope2.analysisResults package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.analysisResults.AnalysisResults.html">rocslope2.analysisResults.AnalysisResults module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.analysisResults.AnalysisResultsEnum.html">rocslope2.analysisResults.AnalysisResultsEnum module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.boltPattern.html">rocslope2.boltPattern package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltPattern.BoltPattern.html">rocslope2.boltPattern.BoltPattern module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.boltProperties.html">rocslope2.boltProperties package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.Bolt.html">rocslope2.boltProperties.Bolt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.BoltProperties.html">rocslope2.boltProperties.BoltProperties module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.MechanicallyAnchoredBolt.html">rocslope2.boltProperties.MechanicallyAnchoredBolt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.SimpleBoltForce.html">rocslope2.boltProperties.SimpleBoltForce module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.SoilNailBaseBolt.html">rocslope2.boltProperties.SoilNailBaseBolt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.UserDefinedBolt.html">rocslope2.boltProperties.UserDefinedBolt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.UserDefinedSupport.html">rocslope2.boltProperties.UserDefinedSupport module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.importFromDips.html">rocslope2.importFromDips package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.importFromDips.ImportFromDips.html">rocslope2.importFromDips.ImportFromDips module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.individualJoint.html">rocslope2.individualJoint package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.individualJoint.IndividualJoint.html">rocslope2.individualJoint.IndividualJoint module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.jointProperties.html">rocslope2.jointProperties package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.jointProperties.JointProperties.html">rocslope2.jointProperties.JointProperties module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.jointProperties.StrengthTab.html">rocslope2.jointProperties.StrengthTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.jointProperties.WaterParametersTab.html">rocslope2.jointProperties.WaterParametersTab module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.jointSet.html">rocslope2.jointSet package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.jointSet.JointSet.html">rocslope2.jointSet.JointSet module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.loading.html">rocslope2.loading package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.loading.PressureLoading.html">rocslope2.loading.PressureLoading module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.loading.PressureLoadingEnum.html">rocslope2.loading.PressureLoadingEnum module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.pointLoad.html">rocslope2.pointLoad package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.pointLoad.PointLoad.html">rocslope2.pointLoad.PointLoad module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.pointLoad.PointLoadEnum.html">rocslope2.pointLoad.PointLoadEnum module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.pointOfForceApplication.html">rocslope2.pointOfForceApplication package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.pointOfForceApplication.PointOfForceApplication.html">rocslope2.pointOfForceApplication.PointOfForceApplication module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.projectSettings.html">rocslope2.projectSettings package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectAnalysisTab.html">rocslope2.projectSettings.ProjectAnalysisTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectDesignStandardTab.html">rocslope2.projectSettings.ProjectDesignStandardTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectSettings.html">rocslope2.projectSettings.ProjectSettings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectSettingsEnum.html">rocslope2.projectSettings.ProjectSettingsEnum module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectStatisticsTab.html">rocslope2.projectSettings.ProjectStatisticsTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectTopplingTab.html">rocslope2.projectSettings.ProjectTopplingTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectUnitsTab.html">rocslope2.projectSettings.ProjectUnitsTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectWedgeTab.html">rocslope2.projectSettings.ProjectWedgeTab module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.scaleBlock.html">rocslope2.scaleBlock package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.scaleBlock.ScalePlanarBlocks.html">rocslope2.scaleBlock.ScalePlanarBlocks module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.scaleBlock.ScaleWedgeBlocks.html">rocslope2.scaleBlock.ScaleWedgeBlocks module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.seismicLoading.html">rocslope2.seismicLoading package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.SeismicDirectionConvention.html">rocslope2.seismicLoading.SeismicDirectionConvention module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.SeismicLoading.html">rocslope2.seismicLoading.SeismicLoading module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.SeismicLoadingEnum.html">rocslope2.seismicLoading.SeismicLoadingEnum module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.SlopeDirectionVerticalCoefficientSeismic.html">rocslope2.seismicLoading.SlopeDirectionVerticalCoefficientSeismic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.TrendPlungeSeismic.html">rocslope2.seismicLoading.TrendPlungeSeismic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.VectorSeismic.html">rocslope2.seismicLoading.VectorSeismic module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.shotcrete.html">rocslope2.shotcrete package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.shotcrete.Shotcrete.html">rocslope2.shotcrete.Shotcrete module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.slopeGeometry.html">rocslope2.slopeGeometry package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.slopeGeometry.SlopeGeometry.html">rocslope2.slopeGeometry.SlopeGeometry module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.slopeProperties.html">rocslope2.slopeProperties package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.slopeProperties.MaterialStrengthTab.html">rocslope2.slopeProperties.MaterialStrengthTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.slopeProperties.SlopeProperties.html">rocslope2.slopeProperties.SlopeProperties module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.slopeProperties.WaterParametersTab.html">rocslope2.slopeProperties.WaterParametersTab module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.spotBolt.html">rocslope2.spotBolt package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.spotBolt.SpotBolt.html">rocslope2.spotBolt.SpotBolt module</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rocslope2.ColorPicker.html">rocslope2.ColorPicker module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rocslope2.Model.html">rocslope2.Model module</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">rocslope2.PropertyEnums module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rocslope2.RocSlope2Modeler.html">rocslope2.RocSlope2Modeler module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rocslope2.StatsDistribution.html">rocslope2.StatsDistribution module</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="rocslope2.html" class="nav-link">RocSlope2 Package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rocslope2.PropertyEnums module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-rocslope2.PropertyEnums">
+<span id="rocslope2-propertyenums-module"></span><h1>rocslope2.PropertyEnums module<a class="headerlink" href="#module-rocslope2.PropertyEnums" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.FisherDistOption">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FisherDistOption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.FisherDistOption" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.FisherDistOption.OPTION_USE_STDV">
+<span class="sig-name descname"><span class="pre">OPTION_USE_STDV</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'OPTION_USE_STDV'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.FisherDistOption.OPTION_USE_STDV" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.FisherDistOption.OPTION_USE_FISHERK">
+<span class="sig-name descname"><span class="pre">OPTION_USE_FISHERK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'OPTION_USE_FISHERK'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.FisherDistOption.OPTION_USE_FISHERK" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.JointOrientationDistributionMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JointOrientationDistributionMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.JointOrientationDistributionMethod" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.JointOrientationDistributionMethod.DIP_DIP_DIRECTION">
+<span class="sig-name descname"><span class="pre">DIP_DIP_DIRECTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DIP_DIP_DIRECTION'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.JointOrientationDistributionMethod.DIP_DIP_DIRECTION" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.JointOrientationDistributionMethod.FISHER">
+<span class="sig-name descname"><span class="pre">FISHER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FISHER'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.JointOrientationDistributionMethod.FISHER" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.UnitSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnitSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.UnitSystem" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.UnitSystem.RFC_METRIC_MPA">
+<span class="sig-name descname"><span class="pre">RFC_METRIC_MPA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RFC_METRIC_MPA'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.UnitSystem.RFC_METRIC_MPA" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.UnitSystem.RFC_METRIC_KPA">
+<span class="sig-name descname"><span class="pre">RFC_METRIC_KPA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RFC_METRIC_KPA'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.UnitSystem.RFC_METRIC_KPA" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.UnitSystem.RFC_METRIC_TONNES">
+<span class="sig-name descname"><span class="pre">RFC_METRIC_TONNES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RFC_METRIC_TONNES'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.UnitSystem.RFC_METRIC_TONNES" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.UnitSystem.RFC_IMPERIAL_TONS">
+<span class="sig-name descname"><span class="pre">RFC_IMPERIAL_TONS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RFC_IMPERIAL_TONS'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.UnitSystem.RFC_IMPERIAL_TONS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.UnitSystem.RFC_IMPERIAL_KSF">
+<span class="sig-name descname"><span class="pre">RFC_IMPERIAL_KSF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RFC_IMPERIAL_KSF'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.UnitSystem.RFC_IMPERIAL_KSF" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.UnitSystem.RFC_IMPERIAL_PSF">
+<span class="sig-name descname"><span class="pre">RFC_IMPERIAL_PSF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RFC_IMPERIAL_PSF'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.UnitSystem.RFC_IMPERIAL_PSF" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.SamplingMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SamplingMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.SamplingMethod" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.SamplingMethod.MONTE_CARLO">
+<span class="sig-name descname"><span class="pre">MONTE_CARLO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MONTE_CARLO'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.SamplingMethod.MONTE_CARLO" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.SamplingMethod.LATIN_HYPERCUBE">
+<span class="sig-name descname"><span class="pre">LATIN_HYPERCUBE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LATIN_HYPERCUBE'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.SamplingMethod.LATIN_HYPERCUBE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.GroundwaterMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GroundwaterMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.GroundwaterMethod" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.GroundwaterMethod.DRY">
+<span class="sig-name descname"><span class="pre">DRY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DRY'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.GroundwaterMethod.DRY" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.GroundwaterMethod.ELEVATION">
+<span class="sig-name descname"><span class="pre">ELEVATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ELEVATION'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.GroundwaterMethod.ELEVATION" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.GroundwaterMethod.WATER_SURFACE">
+<span class="sig-name descname"><span class="pre">WATER_SURFACE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WATER_SURFACE'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.GroundwaterMethod.WATER_SURFACE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.GroundwaterMethod.CUSTOM_PRESSURE">
+<span class="sig-name descname"><span class="pre">CUSTOM_PRESSURE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CUSTOM_PRESSURE'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.GroundwaterMethod.CUSTOM_PRESSURE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.JointStrengthType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JointStrengthType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.JointStrengthType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.JointStrengthType.MOHR_COULOMB">
+<span class="sig-name descname"><span class="pre">MOHR_COULOMB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Mohr-Coulomb'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.JointStrengthType.MOHR_COULOMB" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.JointStrengthType.BARTON_BANDIS">
+<span class="sig-name descname"><span class="pre">BARTON_BANDIS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Barton-Bandis'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.JointStrengthType.BARTON_BANDIS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.JointStrengthType.POWER_CURVE">
+<span class="sig-name descname"><span class="pre">POWER_CURVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Power</span> <span class="pre">Curve'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.JointStrengthType.POWER_CURVE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.JointRandomVariables">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JointRandomVariables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.JointRandomVariables" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.JointRandomVariables.PARAMETERS">
+<span class="sig-name descname"><span class="pre">PARAMETERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PARAMETERS'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.JointRandomVariables.PARAMETERS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.JointRandomVariables.STRENGTH">
+<span class="sig-name descname"><span class="pre">STRENGTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STRENGTH'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.JointRandomVariables.STRENGTH" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.StrengthStatisticalDistribution">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StrengthStatisticalDistribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.StrengthStatisticalDistribution" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.StrengthStatisticalDistribution.NONE">
+<span class="sig-name descname"><span class="pre">NONE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STATISTICS_NONE'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.StrengthStatisticalDistribution.NONE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.StrengthStatisticalDistribution.LOGNORMAL">
+<span class="sig-name descname"><span class="pre">LOGNORMAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STATISTICS_LOGNORMAL'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.StrengthStatisticalDistribution.LOGNORMAL" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.StrengthStatisticalDistribution.GAMMA">
+<span class="sig-name descname"><span class="pre">GAMMA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STATISTICS_GAMMA'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.StrengthStatisticalDistribution.GAMMA" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltOrientation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BoltOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.BoltOrientation" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltOrientation.TREND_PLUNGE">
+<span class="sig-name descname"><span class="pre">TREND_PLUNGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TREND_PLUNGE'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltOrientation.TREND_PLUNGE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltOrientation.NORMAL">
+<span class="sig-name descname"><span class="pre">NORMAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NORMAL'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltOrientation.NORMAL" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.FaceAppliedTo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FaceAppliedTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.FaceAppliedTo" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.FaceAppliedTo.INVALID">
+<span class="sig-name descname"><span class="pre">INVALID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'INVALID'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.FaceAppliedTo.INVALID" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.FaceAppliedTo.SLOPE_FACE">
+<span class="sig-name descname"><span class="pre">SLOPE_FACE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SLOPE_FACE'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.FaceAppliedTo.SLOPE_FACE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.FaceAppliedTo.UPPER_FACE">
+<span class="sig-name descname"><span class="pre">UPPER_FACE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UPPER_FACE'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.FaceAppliedTo.UPPER_FACE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.SpotBoltInstallationFace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SpotBoltInstallationFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.SpotBoltInstallationFace" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.SpotBoltInstallationFace.SLOPE_FACE">
+<span class="sig-name descname"><span class="pre">SLOPE_FACE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.SpotBoltInstallationFace.SLOPE_FACE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.SpotBoltInstallationFace.UPPER_FACE">
+<span class="sig-name descname"><span class="pre">UPPER_FACE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.SpotBoltInstallationFace.UPPER_FACE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltPatterns">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BoltPatterns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.BoltPatterns" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltPatterns.SQUARE">
+<span class="sig-name descname"><span class="pre">SQUARE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Square'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltPatterns.SQUARE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltPatterns.RECTANGLE">
+<span class="sig-name descname"><span class="pre">RECTANGLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Rectangle'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltPatterns.RECTANGLE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BoltType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.BoltType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltType.USER_DEFINED">
+<span class="sig-name descname"><span class="pre">USER_DEFINED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'USER_DEFINED'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltType.USER_DEFINED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltType.MECHANICALLY_ANCHORED">
+<span class="sig-name descname"><span class="pre">MECHANICALLY_ANCHORED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MECHANICALLY_ANCHORED'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltType.MECHANICALLY_ANCHORED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltType.SIMPLE_BOLT_FORCE">
+<span class="sig-name descname"><span class="pre">SIMPLE_BOLT_FORCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SIMPLE_BOLT_FORCE'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltType.SIMPLE_BOLT_FORCE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltType.GROUTED_DOWEL">
+<span class="sig-name descname"><span class="pre">GROUTED_DOWEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GROUTED_DOWEL'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltType.GROUTED_DOWEL" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltType.CABLE_BOLT">
+<span class="sig-name descname"><span class="pre">CABLE_BOLT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CABLE_BOLT'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltType.CABLE_BOLT" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltType.SPLIT_SET">
+<span class="sig-name descname"><span class="pre">SPLIT_SET</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SPLIT_SET'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltType.SPLIT_SET" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltType.SWELLEX_ONLY_BOLT">
+<span class="sig-name descname"><span class="pre">SWELLEX_ONLY_BOLT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SWELLEX_ONLY_BOLT'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltType.SWELLEX_ONLY_BOLT" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltOrientationEfficiencyType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BoltOrientationEfficiencyType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.BoltOrientationEfficiencyType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltOrientationEfficiencyType.COSINE_TENSIONSHEAR">
+<span class="sig-name descname"><span class="pre">COSINE_TENSIONSHEAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'COSINE_TENSIONSHEAR'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltOrientationEfficiencyType.COSINE_TENSIONSHEAR" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.BoltOrientationEfficiencyType.LINEAR_TENSIONSHEAR">
+<span class="sig-name descname"><span class="pre">LINEAR_TENSIONSHEAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LINEAR_TENSIONSHEAR'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.BoltOrientationEfficiencyType.LINEAR_TENSIONSHEAR" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.ActiveApplicationType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ActiveApplicationType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.PropertyEnums.ActiveApplicationType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.ActiveApplicationType.PASSIVE">
+<span class="sig-name descname"><span class="pre">PASSIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PASSIVE'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.ActiveApplicationType.PASSIVE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.PropertyEnums.ActiveApplicationType.ACTIVE">
+<span class="sig-name descname"><span class="pre">ACTIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ACTIVE'</span></em><a class="headerlink" href="#rocslope2.PropertyEnums.ActiveApplicationType.ACTIVE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rocslope2.Model.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">rocslope2.Model module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rocslope2.RocSlope2Modeler.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">rocslope2.RocSlope2Modeler module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.FisherDistOption"><code class="docutils literal notranslate"><span class="pre">FisherDistOption</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.FisherDistOption.OPTION_USE_STDV"><code class="docutils literal notranslate"><span class="pre">FisherDistOption.OPTION_USE_STDV</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.FisherDistOption.OPTION_USE_FISHERK"><code class="docutils literal notranslate"><span class="pre">FisherDistOption.OPTION_USE_FISHERK</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.JointOrientationDistributionMethod"><code class="docutils literal notranslate"><span class="pre">JointOrientationDistributionMethod</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.JointOrientationDistributionMethod.DIP_DIP_DIRECTION"><code class="docutils literal notranslate"><span class="pre">JointOrientationDistributionMethod.DIP_DIP_DIRECTION</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.JointOrientationDistributionMethod.FISHER"><code class="docutils literal notranslate"><span class="pre">JointOrientationDistributionMethod.FISHER</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.UnitSystem"><code class="docutils literal notranslate"><span class="pre">UnitSystem</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.UnitSystem.RFC_METRIC_MPA"><code class="docutils literal notranslate"><span class="pre">UnitSystem.RFC_METRIC_MPA</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.UnitSystem.RFC_METRIC_KPA"><code class="docutils literal notranslate"><span class="pre">UnitSystem.RFC_METRIC_KPA</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.UnitSystem.RFC_METRIC_TONNES"><code class="docutils literal notranslate"><span class="pre">UnitSystem.RFC_METRIC_TONNES</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.UnitSystem.RFC_IMPERIAL_TONS"><code class="docutils literal notranslate"><span class="pre">UnitSystem.RFC_IMPERIAL_TONS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.UnitSystem.RFC_IMPERIAL_KSF"><code class="docutils literal notranslate"><span class="pre">UnitSystem.RFC_IMPERIAL_KSF</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.UnitSystem.RFC_IMPERIAL_PSF"><code class="docutils literal notranslate"><span class="pre">UnitSystem.RFC_IMPERIAL_PSF</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.SamplingMethod"><code class="docutils literal notranslate"><span class="pre">SamplingMethod</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.SamplingMethod.MONTE_CARLO"><code class="docutils literal notranslate"><span class="pre">SamplingMethod.MONTE_CARLO</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.SamplingMethod.LATIN_HYPERCUBE"><code class="docutils literal notranslate"><span class="pre">SamplingMethod.LATIN_HYPERCUBE</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.GroundwaterMethod"><code class="docutils literal notranslate"><span class="pre">GroundwaterMethod</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.GroundwaterMethod.DRY"><code class="docutils literal notranslate"><span class="pre">GroundwaterMethod.DRY</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.GroundwaterMethod.ELEVATION"><code class="docutils literal notranslate"><span class="pre">GroundwaterMethod.ELEVATION</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.GroundwaterMethod.WATER_SURFACE"><code class="docutils literal notranslate"><span class="pre">GroundwaterMethod.WATER_SURFACE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.GroundwaterMethod.CUSTOM_PRESSURE"><code class="docutils literal notranslate"><span class="pre">GroundwaterMethod.CUSTOM_PRESSURE</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.JointStrengthType"><code class="docutils literal notranslate"><span class="pre">JointStrengthType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.JointStrengthType.MOHR_COULOMB"><code class="docutils literal notranslate"><span class="pre">JointStrengthType.MOHR_COULOMB</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.JointStrengthType.BARTON_BANDIS"><code class="docutils literal notranslate"><span class="pre">JointStrengthType.BARTON_BANDIS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.JointStrengthType.POWER_CURVE"><code class="docutils literal notranslate"><span class="pre">JointStrengthType.POWER_CURVE</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.JointRandomVariables"><code class="docutils literal notranslate"><span class="pre">JointRandomVariables</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.JointRandomVariables.PARAMETERS"><code class="docutils literal notranslate"><span class="pre">JointRandomVariables.PARAMETERS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.JointRandomVariables.STRENGTH"><code class="docutils literal notranslate"><span class="pre">JointRandomVariables.STRENGTH</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.StrengthStatisticalDistribution"><code class="docutils literal notranslate"><span class="pre">StrengthStatisticalDistribution</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.StrengthStatisticalDistribution.NONE"><code class="docutils literal notranslate"><span class="pre">StrengthStatisticalDistribution.NONE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.StrengthStatisticalDistribution.LOGNORMAL"><code class="docutils literal notranslate"><span class="pre">StrengthStatisticalDistribution.LOGNORMAL</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.StrengthStatisticalDistribution.GAMMA"><code class="docutils literal notranslate"><span class="pre">StrengthStatisticalDistribution.GAMMA</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltOrientation"><code class="docutils literal notranslate"><span class="pre">BoltOrientation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltOrientation.TREND_PLUNGE"><code class="docutils literal notranslate"><span class="pre">BoltOrientation.TREND_PLUNGE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltOrientation.NORMAL"><code class="docutils literal notranslate"><span class="pre">BoltOrientation.NORMAL</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.FaceAppliedTo"><code class="docutils literal notranslate"><span class="pre">FaceAppliedTo</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.FaceAppliedTo.INVALID"><code class="docutils literal notranslate"><span class="pre">FaceAppliedTo.INVALID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.FaceAppliedTo.SLOPE_FACE"><code class="docutils literal notranslate"><span class="pre">FaceAppliedTo.SLOPE_FACE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.FaceAppliedTo.UPPER_FACE"><code class="docutils literal notranslate"><span class="pre">FaceAppliedTo.UPPER_FACE</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.SpotBoltInstallationFace"><code class="docutils literal notranslate"><span class="pre">SpotBoltInstallationFace</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.SpotBoltInstallationFace.SLOPE_FACE"><code class="docutils literal notranslate"><span class="pre">SpotBoltInstallationFace.SLOPE_FACE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.SpotBoltInstallationFace.UPPER_FACE"><code class="docutils literal notranslate"><span class="pre">SpotBoltInstallationFace.UPPER_FACE</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltPatterns"><code class="docutils literal notranslate"><span class="pre">BoltPatterns</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltPatterns.SQUARE"><code class="docutils literal notranslate"><span class="pre">BoltPatterns.SQUARE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltPatterns.RECTANGLE"><code class="docutils literal notranslate"><span class="pre">BoltPatterns.RECTANGLE</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltType"><code class="docutils literal notranslate"><span class="pre">BoltType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltType.USER_DEFINED"><code class="docutils literal notranslate"><span class="pre">BoltType.USER_DEFINED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltType.MECHANICALLY_ANCHORED"><code class="docutils literal notranslate"><span class="pre">BoltType.MECHANICALLY_ANCHORED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltType.SIMPLE_BOLT_FORCE"><code class="docutils literal notranslate"><span class="pre">BoltType.SIMPLE_BOLT_FORCE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltType.GROUTED_DOWEL"><code class="docutils literal notranslate"><span class="pre">BoltType.GROUTED_DOWEL</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltType.CABLE_BOLT"><code class="docutils literal notranslate"><span class="pre">BoltType.CABLE_BOLT</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltType.SPLIT_SET"><code class="docutils literal notranslate"><span class="pre">BoltType.SPLIT_SET</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltType.SWELLEX_ONLY_BOLT"><code class="docutils literal notranslate"><span class="pre">BoltType.SWELLEX_ONLY_BOLT</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltOrientationEfficiencyType"><code class="docutils literal notranslate"><span class="pre">BoltOrientationEfficiencyType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltOrientationEfficiencyType.COSINE_TENSIONSHEAR"><code class="docutils literal notranslate"><span class="pre">BoltOrientationEfficiencyType.COSINE_TENSIONSHEAR</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.BoltOrientationEfficiencyType.LINEAR_TENSIONSHEAR"><code class="docutils literal notranslate"><span class="pre">BoltOrientationEfficiencyType.LINEAR_TENSIONSHEAR</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.ActiveApplicationType"><code class="docutils literal notranslate"><span class="pre">ActiveApplicationType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.ActiveApplicationType.PASSIVE"><code class="docutils literal notranslate"><span class="pre">ActiveApplicationType.PASSIVE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.PropertyEnums.ActiveApplicationType.ACTIVE"><code class="docutils literal notranslate"><span class="pre">ActiveApplicationType.ACTIVE</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generatedAPIDocFiles/rocslope2.PropertyEnums.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rocscience Inc..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

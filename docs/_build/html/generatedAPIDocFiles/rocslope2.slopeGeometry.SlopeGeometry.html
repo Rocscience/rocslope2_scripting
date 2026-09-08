@@ -1,0 +1,908 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rocslope2.slopeGeometry.SlopeGeometry module &#8212; RocSlope2 Scripting Reference Manual  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'generatedAPIDocFiles/rocslope2.slopeGeometry.SlopeGeometry';</script>
+    <link rel="icon" href="../_static/rocscience_favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="rocslope2.slopeProperties package" href="rocslope2.slopeProperties.html" />
+    <link rel="prev" title="rocslope2.slopeGeometry package" href="rocslope2.slopeGeometry.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-light" alt="RocSlope2 Scripting Reference Manual  documentation - Home"/>
+    <img src="../_static/rocscience-logo-primary.png" class="logo__image only-dark pst-js-only" alt="RocSlope2 Scripting Reference Manual  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rocslope2.html">
+    RocSlope2 Package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="rocslope2.html">
+    RocSlope2 Package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../examples.html">
+    Python Script Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.analysisResults.html">rocslope2.analysisResults package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.analysisResults.AnalysisResults.html">rocslope2.analysisResults.AnalysisResults module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.analysisResults.AnalysisResultsEnum.html">rocslope2.analysisResults.AnalysisResultsEnum module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.boltPattern.html">rocslope2.boltPattern package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltPattern.BoltPattern.html">rocslope2.boltPattern.BoltPattern module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.boltProperties.html">rocslope2.boltProperties package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.Bolt.html">rocslope2.boltProperties.Bolt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.BoltProperties.html">rocslope2.boltProperties.BoltProperties module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.MechanicallyAnchoredBolt.html">rocslope2.boltProperties.MechanicallyAnchoredBolt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.SimpleBoltForce.html">rocslope2.boltProperties.SimpleBoltForce module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.SoilNailBaseBolt.html">rocslope2.boltProperties.SoilNailBaseBolt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.UserDefinedBolt.html">rocslope2.boltProperties.UserDefinedBolt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.boltProperties.UserDefinedSupport.html">rocslope2.boltProperties.UserDefinedSupport module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.importFromDips.html">rocslope2.importFromDips package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.importFromDips.ImportFromDips.html">rocslope2.importFromDips.ImportFromDips module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.individualJoint.html">rocslope2.individualJoint package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.individualJoint.IndividualJoint.html">rocslope2.individualJoint.IndividualJoint module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.jointProperties.html">rocslope2.jointProperties package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.jointProperties.JointProperties.html">rocslope2.jointProperties.JointProperties module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.jointProperties.StrengthTab.html">rocslope2.jointProperties.StrengthTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.jointProperties.WaterParametersTab.html">rocslope2.jointProperties.WaterParametersTab module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.jointSet.html">rocslope2.jointSet package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.jointSet.JointSet.html">rocslope2.jointSet.JointSet module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.loading.html">rocslope2.loading package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.loading.PressureLoading.html">rocslope2.loading.PressureLoading module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.loading.PressureLoadingEnum.html">rocslope2.loading.PressureLoadingEnum module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.pointLoad.html">rocslope2.pointLoad package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.pointLoad.PointLoad.html">rocslope2.pointLoad.PointLoad module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.pointLoad.PointLoadEnum.html">rocslope2.pointLoad.PointLoadEnum module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.pointOfForceApplication.html">rocslope2.pointOfForceApplication package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.pointOfForceApplication.PointOfForceApplication.html">rocslope2.pointOfForceApplication.PointOfForceApplication module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.projectSettings.html">rocslope2.projectSettings package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectAnalysisTab.html">rocslope2.projectSettings.ProjectAnalysisTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectDesignStandardTab.html">rocslope2.projectSettings.ProjectDesignStandardTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectSettings.html">rocslope2.projectSettings.ProjectSettings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectSettingsEnum.html">rocslope2.projectSettings.ProjectSettingsEnum module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectStatisticsTab.html">rocslope2.projectSettings.ProjectStatisticsTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectTopplingTab.html">rocslope2.projectSettings.ProjectTopplingTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectUnitsTab.html">rocslope2.projectSettings.ProjectUnitsTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.projectSettings.ProjectWedgeTab.html">rocslope2.projectSettings.ProjectWedgeTab module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.scaleBlock.html">rocslope2.scaleBlock package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.scaleBlock.ScalePlanarBlocks.html">rocslope2.scaleBlock.ScalePlanarBlocks module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.scaleBlock.ScaleWedgeBlocks.html">rocslope2.scaleBlock.ScaleWedgeBlocks module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.seismicLoading.html">rocslope2.seismicLoading package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.SeismicDirectionConvention.html">rocslope2.seismicLoading.SeismicDirectionConvention module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.SeismicLoading.html">rocslope2.seismicLoading.SeismicLoading module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.SeismicLoadingEnum.html">rocslope2.seismicLoading.SeismicLoadingEnum module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.SlopeDirectionVerticalCoefficientSeismic.html">rocslope2.seismicLoading.SlopeDirectionVerticalCoefficientSeismic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.TrendPlungeSeismic.html">rocslope2.seismicLoading.TrendPlungeSeismic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.seismicLoading.VectorSeismic.html">rocslope2.seismicLoading.VectorSeismic module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.shotcrete.html">rocslope2.shotcrete package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.shotcrete.Shotcrete.html">rocslope2.shotcrete.Shotcrete module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="rocslope2.slopeGeometry.html">rocslope2.slopeGeometry package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">rocslope2.slopeGeometry.SlopeGeometry module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.slopeProperties.html">rocslope2.slopeProperties package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.slopeProperties.MaterialStrengthTab.html">rocslope2.slopeProperties.MaterialStrengthTab module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.slopeProperties.SlopeProperties.html">rocslope2.slopeProperties.SlopeProperties module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.slopeProperties.WaterParametersTab.html">rocslope2.slopeProperties.WaterParametersTab module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rocslope2.spotBolt.html">rocslope2.spotBolt package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rocslope2.spotBolt.SpotBolt.html">rocslope2.spotBolt.SpotBolt module</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rocslope2.ColorPicker.html">rocslope2.ColorPicker module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rocslope2.Model.html">rocslope2.Model module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rocslope2.PropertyEnums.html">rocslope2.PropertyEnums module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rocslope2.RocSlope2Modeler.html">rocslope2.RocSlope2Modeler module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rocslope2.StatsDistribution.html">rocslope2.StatsDistribution module</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="rocslope2.html" class="nav-link">RocSlope2 Package</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="rocslope2.slopeGeometry.html" class="nav-link">rocslope2.slopeGeometry package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rocslope2.slopeGeometry.SlopeGeometry module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-rocslope2.slopeGeometry.SlopeGeometry">
+<span id="rocslope2-slopegeometry-slopegeometry-module"></span><h1>rocslope2.slopeGeometry.SlopeGeometry module<a class="headerlink" href="#module-rocslope2.slopeGeometry.SlopeGeometry" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StatsDistributionProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeDip">
+<span class="sig-name descname"><span class="pre">SlopeDip</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SlopeDip'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeDipDirection">
+<span class="sig-name descname"><span class="pre">SlopeDipDirection</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SlopeDipDirection'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeDipDirection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeHeight">
+<span class="sig-name descname"><span class="pre">SlopeHeight</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SlopeHeight'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeHeight" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeLength">
+<span class="sig-name descname"><span class="pre">SlopeLength</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SlopeLength'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeLength" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.UpperFaceDip">
+<span class="sig-name descname"><span class="pre">UpperFaceDip</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UpperFaceDip'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.UpperFaceDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.UpperFaceDipDirection">
+<span class="sig-name descname"><span class="pre">UpperFaceDipDirection</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UpperFaceDipDirection'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.UpperFaceDipDirection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.UpperFaceBenchWidth">
+<span class="sig-name descname"><span class="pre">UpperFaceBenchWidth</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UpperFaceBenchWidth'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.UpperFaceBenchWidth" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.TensionCrackDip">
+<span class="sig-name descname"><span class="pre">TensionCrackDip</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TensionCrackDip'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.TensionCrackDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.TensionCrackDipDirection">
+<span class="sig-name descname"><span class="pre">TensionCrackDipDirection</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TensionCrackDipDirection'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.TensionCrackDipDirection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.TensionCrackDistanceFromCrest">
+<span class="sig-name descname"><span class="pre">TensionCrackDistanceFromCrest</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TensionCrackDistanceFromCrest'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.TensionCrackDistanceFromCrest" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.OverallBaseInclinationDip">
+<span class="sig-name descname"><span class="pre">OverallBaseInclinationDip</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'OverallBaseInclinationDip'</span></em><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.OverallBaseInclinationDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SlopeGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ProxyObject</span></code></p>
+<p>Examples:
+<a class="reference internal" href="../examples/slope_geometry/slope_geometry.html#slope-geometry-example"><span class="std std-ref">Code Snippet: Slope Geometry</span></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getOriginPoint">
+<span class="sig-name descname"><span class="pre">getOriginPoint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getOriginPoint" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setOriginPoint">
+<span class="sig-name descname"><span class="pre">setOriginPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setOriginPoint" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeDip">
+<span class="sig-name descname"><span class="pre">getSlopeDip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeDip">
+<span class="sig-name descname"><span class="pre">setSlopeDip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeDipDirection">
+<span class="sig-name descname"><span class="pre">getSlopeDipDirection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeDipDirection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeDipDirection">
+<span class="sig-name descname"><span class="pre">setSlopeDipDirection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeDipDirection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeHeight">
+<span class="sig-name descname"><span class="pre">getSlopeHeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeHeight" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeHeight">
+<span class="sig-name descname"><span class="pre">setSlopeHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeHeight" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeLength">
+<span class="sig-name descname"><span class="pre">getSlopeLength</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeLength" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeLength">
+<span class="sig-name descname"><span class="pre">setSlopeLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeLength" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsOverhanging">
+<span class="sig-name descname"><span class="pre">getIsOverhanging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsOverhanging" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsOverhanging">
+<span class="sig-name descname"><span class="pre">setIsOverhanging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsOverhanging" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsDefineSlopeLength">
+<span class="sig-name descname"><span class="pre">getIsDefineSlopeLength</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsDefineSlopeLength" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsDefineSlopeLength">
+<span class="sig-name descname"><span class="pre">setIsDefineSlopeLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsDefineSlopeLength" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getUpperFaceDip">
+<span class="sig-name descname"><span class="pre">getUpperFaceDip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getUpperFaceDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setUpperFaceDip">
+<span class="sig-name descname"><span class="pre">setUpperFaceDip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setUpperFaceDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getUpperFaceDipDirection">
+<span class="sig-name descname"><span class="pre">getUpperFaceDipDirection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getUpperFaceDipDirection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setUpperFaceDipDirection">
+<span class="sig-name descname"><span class="pre">setUpperFaceDipDirection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setUpperFaceDipDirection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getUpperFaceBenchWidth">
+<span class="sig-name descname"><span class="pre">getUpperFaceBenchWidth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getUpperFaceBenchWidth" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setUpperFaceBenchWidth">
+<span class="sig-name descname"><span class="pre">setUpperFaceBenchWidth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setUpperFaceBenchWidth" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsBenchWidthDefined">
+<span class="sig-name descname"><span class="pre">getIsBenchWidthDefined</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsBenchWidthDefined" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsBenchWidthDefined">
+<span class="sig-name descname"><span class="pre">setIsBenchWidthDefined</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsBenchWidthDefined" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSelectedTC_FisherDistOptionMethod">
+<span class="sig-name descname"><span class="pre">getSelectedTC_FisherDistOptionMethod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rocslope2.PropertyEnums.html#rocslope2.PropertyEnums.FisherDistOption" title="rocslope2.PropertyEnums.FisherDistOption"><span class="pre">FisherDistOption</span></a></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSelectedTC_FisherDistOptionMethod" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSelectedTC_FisherDistOptionMethod">
+<span class="sig-name descname"><span class="pre">setSelectedTC_FisherDistOptionMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rocslope2.PropertyEnums.html#rocslope2.PropertyEnums.FisherDistOption" title="rocslope2.PropertyEnums.FisherDistOption"><span class="pre">FisherDistOption</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSelectedTC_FisherDistOptionMethod" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSelectedTC_OrientationDistributionMethod">
+<span class="sig-name descname"><span class="pre">getSelectedTC_OrientationDistributionMethod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rocslope2.PropertyEnums.html#rocslope2.PropertyEnums.JointOrientationDistributionMethod" title="rocslope2.PropertyEnums.JointOrientationDistributionMethod"><span class="pre">JointOrientationDistributionMethod</span></a></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSelectedTC_OrientationDistributionMethod" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSelectedTC_OrientationDistributionMethod">
+<span class="sig-name descname"><span class="pre">setSelectedTC_OrientationDistributionMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rocslope2.PropertyEnums.html#rocslope2.PropertyEnums.JointOrientationDistributionMethod" title="rocslope2.PropertyEnums.JointOrientationDistributionMethod"><span class="pre">JointOrientationDistributionMethod</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSelectedTC_OrientationDistributionMethod" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTC_FisherDist_Stdv">
+<span class="sig-name descname"><span class="pre">getTC_FisherDist_Stdv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTC_FisherDist_Stdv" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTC_FisherDist_Stdv">
+<span class="sig-name descname"><span class="pre">setTC_FisherDist_Stdv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTC_FisherDist_Stdv" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTC_FisherDist_FisherK">
+<span class="sig-name descname"><span class="pre">getTC_FisherDist_FisherK</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTC_FisherDist_FisherK" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTC_FisherDist_FisherK">
+<span class="sig-name descname"><span class="pre">setTC_FisherDist_FisherK</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTC_FisherDist_FisherK" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackDip">
+<span class="sig-name descname"><span class="pre">getTensionCrackDip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackDip">
+<span class="sig-name descname"><span class="pre">setTensionCrackDip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackDipDirection">
+<span class="sig-name descname"><span class="pre">getTensionCrackDipDirection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackDipDirection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackDipDirection">
+<span class="sig-name descname"><span class="pre">setTensionCrackDipDirection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackDipDirection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackDistanceFromCrest">
+<span class="sig-name descname"><span class="pre">getTensionCrackDistanceFromCrest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackDistanceFromCrest" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackDistanceFromCrest">
+<span class="sig-name descname"><span class="pre">setTensionCrackDistanceFromCrest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackDistanceFromCrest" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsTensionCrackExists">
+<span class="sig-name descname"><span class="pre">getIsTensionCrackExists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsTensionCrackExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsTensionCrackExists">
+<span class="sig-name descname"><span class="pre">setIsTensionCrackExists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsTensionCrackExists" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsTensionCrackMinAreaDefined">
+<span class="sig-name descname"><span class="pre">getIsTensionCrackMinAreaDefined</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsTensionCrackMinAreaDefined" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsTensionCrackMinAreaDefined">
+<span class="sig-name descname"><span class="pre">setIsTensionCrackMinAreaDefined</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsTensionCrackMinAreaDefined" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackMinArea">
+<span class="sig-name descname"><span class="pre">getTensionCrackMinArea</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackMinArea" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackMinArea">
+<span class="sig-name descname"><span class="pre">setTensionCrackMinArea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackMinArea" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getOverallBaseInclinationDip">
+<span class="sig-name descname"><span class="pre">getOverallBaseInclinationDip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getOverallBaseInclinationDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setOverallBaseInclinationDip">
+<span class="sig-name descname"><span class="pre">setOverallBaseInclinationDip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setOverallBaseInclinationDip" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getStatsDistribution">
+<span class="sig-name descname"><span class="pre">getStatsDistribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statsDistributionProperty</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty" title="rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty"><span class="pre">StatsDistributionProperty</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rocslope2.StatsDistribution.html#rocslope2.StatsDistribution.StatsDistribution" title="rocslope2.StatsDistribution.StatsDistribution"><span class="pre">StatsDistribution</span></a></span></span><a class="headerlink" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getStatsDistribution" title="Link to this definition">#</a></dt>
+<dd><p>Returns a StatsDistribution for the given slope geometry property.
+Probabilistic analysis must be enabled first.</p>
+<p>Examples:
+<a class="reference internal" href="../examples/stats_distribution/stats_distribution.html#stats-distribution-example"><span class="std std-ref">Code Snippet: Statistical Distributions</span></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rocslope2.slopeGeometry.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">rocslope2.slopeGeometry package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rocslope2.slopeProperties.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">rocslope2.slopeProperties package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeDip"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.SlopeDip</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeDipDirection"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.SlopeDipDirection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeHeight"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.SlopeHeight</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.SlopeLength"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.SlopeLength</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.UpperFaceDip"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.UpperFaceDip</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.UpperFaceDipDirection"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.UpperFaceDipDirection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.UpperFaceBenchWidth"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.UpperFaceBenchWidth</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.TensionCrackDip"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.TensionCrackDip</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.TensionCrackDipDirection"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.TensionCrackDipDirection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.TensionCrackDistanceFromCrest"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.TensionCrackDistanceFromCrest</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.StatsDistributionProperty.OverallBaseInclinationDip"><code class="docutils literal notranslate"><span class="pre">StatsDistributionProperty.OverallBaseInclinationDip</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getOriginPoint"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getOriginPoint()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setOriginPoint"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setOriginPoint()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeDip"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getSlopeDip()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeDip"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setSlopeDip()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeDipDirection"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getSlopeDipDirection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeDipDirection"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setSlopeDipDirection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeHeight"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getSlopeHeight()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeHeight"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setSlopeHeight()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSlopeLength"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getSlopeLength()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSlopeLength"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setSlopeLength()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsOverhanging"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getIsOverhanging()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsOverhanging"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setIsOverhanging()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsDefineSlopeLength"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getIsDefineSlopeLength()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsDefineSlopeLength"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setIsDefineSlopeLength()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getUpperFaceDip"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getUpperFaceDip()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setUpperFaceDip"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setUpperFaceDip()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getUpperFaceDipDirection"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getUpperFaceDipDirection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setUpperFaceDipDirection"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setUpperFaceDipDirection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getUpperFaceBenchWidth"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getUpperFaceBenchWidth()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setUpperFaceBenchWidth"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setUpperFaceBenchWidth()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsBenchWidthDefined"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getIsBenchWidthDefined()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsBenchWidthDefined"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setIsBenchWidthDefined()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSelectedTC_FisherDistOptionMethod"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getSelectedTC_FisherDistOptionMethod()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSelectedTC_FisherDistOptionMethod"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setSelectedTC_FisherDistOptionMethod()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getSelectedTC_OrientationDistributionMethod"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getSelectedTC_OrientationDistributionMethod()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setSelectedTC_OrientationDistributionMethod"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setSelectedTC_OrientationDistributionMethod()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTC_FisherDist_Stdv"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getTC_FisherDist_Stdv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTC_FisherDist_Stdv"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setTC_FisherDist_Stdv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTC_FisherDist_FisherK"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getTC_FisherDist_FisherK()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTC_FisherDist_FisherK"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setTC_FisherDist_FisherK()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackDip"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getTensionCrackDip()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackDip"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setTensionCrackDip()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackDipDirection"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getTensionCrackDipDirection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackDipDirection"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setTensionCrackDipDirection()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackDistanceFromCrest"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getTensionCrackDistanceFromCrest()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackDistanceFromCrest"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setTensionCrackDistanceFromCrest()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsTensionCrackExists"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getIsTensionCrackExists()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsTensionCrackExists"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setIsTensionCrackExists()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getIsTensionCrackMinAreaDefined"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getIsTensionCrackMinAreaDefined()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setIsTensionCrackMinAreaDefined"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setIsTensionCrackMinAreaDefined()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getTensionCrackMinArea"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getTensionCrackMinArea()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setTensionCrackMinArea"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setTensionCrackMinArea()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getOverallBaseInclinationDip"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getOverallBaseInclinationDip()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.setOverallBaseInclinationDip"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.setOverallBaseInclinationDip()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.slopeGeometry.SlopeGeometry.SlopeGeometry.getStatsDistribution"><code class="docutils literal notranslate"><span class="pre">SlopeGeometry.getStatsDistribution()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/generatedAPIDocFiles/rocslope2.slopeGeometry.SlopeGeometry.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rocscience Inc..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+The application did not start within the given timeout time.
+Traceback (most recent call last):
+  File "C:\Users\CarterComish\source\repos\RocSlope2Scripting\docs\example_code\slope_geometry_example.py", line 10, in <module>
+    RocSlope2Modeler.startApplication()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\CarterComish\source\repos\RocSlope2Scripting\venv\Lib\site-packages\rocslope2\RocSlope2Modeler.py", line 41, in startApplication
+    appManager.startApplication(os.path.normpath(executablePath), port, cls._isServerRunning, logger, timeout)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CarterComish\source\repos\RocSlope2Scripting\venv\Lib\site-packages\rocslope2\ApplicationManager.py", line 40, in startApplication
+    self._tryToConnectToServer(port, isServerRunning, timeout, logger)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CarterComish\source\repos\RocSlope2Scripting\venv\Lib\site-packages\rocslope2\ApplicationManager.py", line 67, in _tryToConnectToServer
+    raise TimeoutError(msg)
+TimeoutError: The application did not start within the given timeout time.
