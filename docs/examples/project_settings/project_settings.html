@@ -358,6 +358,7 @@
   <section id="project-settings-script-example">
 <h1>Project Settings Script Example<a class="headerlink" href="#project-settings-script-example" title="Link to this heading">#</a></h1>
 <p>This example configures units, analysis modes, wedge/toppling options, and statistics settings.</p>
+<p>Download the <a class="reference external" href="https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2">blankProject.rocslope2</a> for this example.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <span id="project-settings-example"></span><div class="code-block-caption"><span class="caption-text">Code Snippet: Project Settings</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rocslope2.RocSlope2Modeler</span> <span class="kn">import</span> <span class="n">RocSlope2Modeler</span>
@@ -393,7 +394,7 @@
 <span class="n">analysis</span><span class="o">.</span><span class="n">setSelectedOrientationDefinitionMethod</span><span class="p">(</span><span class="n">OrientationDefinition</span><span class="o">.</span><span class="n">USE_TRUE_DIP</span><span class="p">)</span>
 
 <span class="n">wedge</span> <span class="o">=</span> <span class="n">project_settings</span><span class="o">.</span><span class="n">wedgeTab</span>
-<span class="n">wedge</span><span class="o">.</span><span class="n">setSelectedBlockShapeMethod</span><span class="p">(</span><span class="n">BlockShape</span><span class="o">.</span><span class="n">WEDGE</span><span class="p">)</span>
+<span class="n">wedge</span><span class="o">.</span><span class="n">setSelectedBlockShapeMethod</span><span class="p">(</span><span class="n">BlockShape</span><span class="o">.</span><span class="n">BASAL_JOINT</span><span class="p">)</span>
 <span class="n">wedge</span><span class="o">.</span><span class="n">setIsIncludeSocketWedges</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">toppling</span> <span class="o">=</span> <span class="n">project_settings</span><span class="o">.</span><span class="n">topplingTab</span>
@@ -418,7 +419,9 @@
 </div>
 <section id="output">
 <h2>Output<a class="headerlink" href="#output" title="Link to this heading">#</a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Unit system: UnitSystem.RFC_METRIC_MPA
+Design FoS: 1.5
+Analysis type: AnalysisType.DETERMINISTIC
 </pre></div>
 </div>
 </section>

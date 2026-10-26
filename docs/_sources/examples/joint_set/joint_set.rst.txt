@@ -3,6 +3,8 @@ Joint Set Script Example
 
 This example renames a joint set, updates spacing and orientation distribution settings, and creates an individual joint.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Joint Set Example:
 .. literalinclude:: ../../example_code/joint_set_example.py
    :language: python

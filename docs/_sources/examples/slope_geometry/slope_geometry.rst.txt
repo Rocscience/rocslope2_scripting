@@ -3,6 +3,8 @@ Slope Geometry Script Example
 
 This example edits slope, upper-face, and tension-crack geometry through ``SlopeGeometry``.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Slope Geometry Example:
 .. literalinclude:: ../../example_code/slope_geometry_example.py
    :language: python

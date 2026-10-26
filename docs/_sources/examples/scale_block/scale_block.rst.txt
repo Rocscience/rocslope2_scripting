@@ -3,6 +3,8 @@ Scale Block Script Example
 
 This example configures scaling limits for wedge and planar blocks, then maximizes the scaled geometry.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Scale Block Example:
 .. literalinclude:: ../../example_code/scale_block_example.py
    :language: python

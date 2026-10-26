@@ -358,10 +358,11 @@
   <section id="bolt-pattern-script-example">
 <h1>Bolt Pattern Script Example<a class="headerlink" href="#bolt-pattern-script-example" title="Link to this heading">#</a></h1>
 <p>This example opens <code class="docutils literal notranslate"><span class="pre">BoltPatternsProject.rocslope2</span></code>, edits an existing bolt pattern, and creates a new pattern.</p>
+<p>Download the <a class="reference external" href="https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/BoltPatternsProject.rocslope2">BoltPatternsProject.rocslope2</a> for this example.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <span id="bolt-pattern-example"></span><div class="code-block-caption"><span class="caption-text">Code Snippet: Bolt Pattern</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rocslope2.RocSlope2Modeler</span> <span class="kn">import</span> <span class="n">RocSlope2Modeler</span>
-<span class="kn">from</span> <span class="nn">rocslope2.PropertyEnums</span> <span class="kn">import</span> <span class="n">BoltOrientation</span><span class="p">,</span> <span class="n">FaceAppliedTo</span><span class="p">,</span> <span class="n">BoltPatterns</span>
+<span class="kn">from</span> <span class="nn">rocslope2.PropertyEnums</span> <span class="kn">import</span> <span class="n">BoltOrientation</span><span class="p">,</span> <span class="n">FaceAppliedTo</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">inspect</span>
 
@@ -383,7 +384,6 @@
 <span class="n">pattern</span><span class="o">.</span><span class="n">setVerticalSpacing</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
 <span class="n">pattern</span><span class="o">.</span><span class="n">setHorizontalOffset</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
 <span class="n">pattern</span><span class="o">.</span><span class="n">setVerticalOffset</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="n">pattern</span><span class="o">.</span><span class="n">setSelectedBoltPatternMethod</span><span class="p">(</span><span class="n">BoltPatterns</span><span class="o">.</span><span class="n">RECTANGLE</span><span class="p">)</span>
 
 <span class="c1"># Create an additional pattern linked to an existing bolt property</span>
 <span class="n">new_pattern</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">addBoltPattern</span><span class="p">()</span>
@@ -399,7 +399,7 @@
 </div>
 <section id="output">
 <h2>Output<a class="headerlink" href="#output" title="Link to this heading">#</a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Bolt pattern count: 2
 </pre></div>
 </div>
 </section>
