@@ -3,6 +3,8 @@ Pressure Loading Script Example
 
 This example applies active/passive pressure loading to the slope face and upper face.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Pressure Loading Example:
 .. literalinclude:: ../../example_code/pressure_loading_example.py
    :language: python

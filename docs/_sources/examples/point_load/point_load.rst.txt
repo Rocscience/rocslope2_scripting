@@ -3,6 +3,8 @@ Point Load Script Example
 
 This example creates a point load, configures trend/plunge/force and design-standard load action/effect, then deletes it.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Point Load Example:
 .. literalinclude:: ../../example_code/point_load_example.py
    :language: python

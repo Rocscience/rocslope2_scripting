@@ -3,6 +3,8 @@ Analysis Results Script Example
 
 This example computes the model and reads wedge analysis results through ``getAnalysisResults``.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Analysis Results Example:
 .. literalinclude:: ../../example_code/analysis_results_example.py
    :language: python

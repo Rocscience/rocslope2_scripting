@@ -358,6 +358,7 @@
   <section id="model-script-example">
 <h1>Model Script Example<a class="headerlink" href="#model-script-example" title="Link to this heading">#</a></h1>
 <p>This example opens <code class="docutils literal notranslate"><span class="pre">blankProject.rocslope2</span></code>, renames a joint set, saves, saves-as, exports an image, computes, and closes RocSlope2.</p>
+<p>Download the <a class="reference external" href="https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2">blankProject.rocslope2</a> for this example.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <span id="model-example"></span><div class="code-block-caption"><span class="caption-text">Code Snippet: Model Manipulation</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rocslope2.RocSlope2Modeler</span> <span class="kn">import</span> <span class="n">RocSlope2Modeler</span>
@@ -387,8 +388,6 @@
 <span class="n">model</span><span class="o">.</span><span class="n">exportImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model saved, saved-as, image exported, and computed.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Save-as path: </span><span class="si">{</span><span class="n">save_as_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Export image path: </span><span class="si">{</span><span class="n">image_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">saveProject</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">modeler</span><span class="o">.</span><span class="n">closeProgram</span><span class="p">()</span>
@@ -397,7 +396,8 @@
 </div>
 <section id="output">
 <h2>Output<a class="headerlink" href="#output" title="Link to this heading">#</a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Joint set name: Joint Set A
+Model saved, saved-as, image exported, and computed.
 </pre></div>
 </div>
 </section>

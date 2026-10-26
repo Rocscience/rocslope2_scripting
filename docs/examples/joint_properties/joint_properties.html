@@ -358,11 +358,13 @@
   <section id="joint-properties-script-example">
 <h1>Joint Properties Script Example<a class="headerlink" href="#joint-properties-script-example" title="Link to this heading">#</a></h1>
 <p>This example creates a joint property definition and configures Mohr-Coulomb strength parameters.</p>
+<p>Download the <a class="reference external" href="https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2">blankProject.rocslope2</a> for this example.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <span id="joint-properties-example"></span><div class="code-block-caption"><span class="caption-text">Code Snippet: Joint Properties</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rocslope2.RocSlope2Modeler</span> <span class="kn">import</span> <span class="n">RocSlope2Modeler</span>
 <span class="kn">from</span> <span class="nn">rocslope2.ColorPicker</span> <span class="kn">import</span> <span class="n">ColorType</span>
 <span class="kn">from</span> <span class="nn">rocslope2.PropertyEnums</span> <span class="kn">import</span> <span class="n">JointStrengthType</span><span class="p">,</span> <span class="n">JointRandomVariables</span>
+<span class="kn">from</span> <span class="nn">rocslope2.projectSettings.ProjectSettingsEnum</span> <span class="kn">import</span> <span class="n">AnalysisType</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">inspect</span>
 
@@ -380,6 +382,7 @@
 
 <span class="n">strength</span> <span class="o">=</span> <span class="n">joint_properties</span><span class="o">.</span><span class="n">strengthTab</span>
 <span class="n">strength</span><span class="o">.</span><span class="n">setSelectedStrengthTypeMethod</span><span class="p">(</span><span class="n">JointStrengthType</span><span class="o">.</span><span class="n">MOHR_COULOMB</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">getProjectSettings</span><span class="p">()</span><span class="o">.</span><span class="n">statisticsTab</span><span class="o">.</span><span class="n">setSelectedAnalysisTypeMethod</span><span class="p">(</span><span class="n">AnalysisType</span><span class="o">.</span><span class="n">PROBABILISTIC</span><span class="p">)</span>
 <span class="n">strength</span><span class="o">.</span><span class="n">setSelectedRandomVariablesMethod</span><span class="p">(</span><span class="n">JointRandomVariables</span><span class="o">.</span><span class="n">PARAMETERS</span><span class="p">)</span>
 <span class="n">strength</span><span class="o">.</span><span class="n">setWaviness</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>
 <span class="n">strength</span><span class="o">.</span><span class="n">setCohesion</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
@@ -397,7 +400,7 @@
 </div>
 <section id="output">
 <h2>Output<a class="headerlink" href="#output" title="Link to this heading">#</a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Joint properties: [&#39;Joint Property 1&#39;, &#39;Joint Property 2&#39;, &#39;Script Joint Property&#39;]
 </pre></div>
 </div>
 </section>

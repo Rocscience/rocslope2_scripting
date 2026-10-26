@@ -358,10 +358,11 @@
   <section id="spot-bolt-script-example">
 <h1>Spot Bolt Script Example<a class="headerlink" href="#spot-bolt-script-example" title="Link to this heading">#</a></h1>
 <p>This example creates a spot bolt on the slope face, assigns bolt properties, edits orientation, then deletes it.</p>
+<p>Download the <a class="reference external" href="https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2">blankProject.rocslope2</a> for this example.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <span id="spot-bolt-example"></span><div class="code-block-caption"><span class="caption-text">Code Snippet: Spot Bolt</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rocslope2.RocSlope2Modeler</span> <span class="kn">import</span> <span class="n">RocSlope2Modeler</span>
-<span class="kn">from</span> <span class="nn">rocslope2.PropertyEnums</span> <span class="kn">import</span> <span class="n">BoltOrientation</span><span class="p">,</span> <span class="n">FaceAppliedTo</span><span class="p">,</span> <span class="n">SpotBoltInstallationFace</span>
+<span class="kn">from</span> <span class="nn">rocslope2.PropertyEnums</span> <span class="kn">import</span> <span class="n">BoltOrientation</span><span class="p">,</span> <span class="n">SpotBoltInstallationFace</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">inspect</span>
 
@@ -379,7 +380,6 @@
 <span class="n">spot_bolt</span><span class="o">.</span><span class="n">setTrend</span><span class="p">(</span><span class="mf">120.0</span><span class="p">)</span>
 <span class="n">spot_bolt</span><span class="o">.</span><span class="n">setPlunge</span><span class="p">(</span><span class="o">-</span><span class="mf">30.0</span><span class="p">)</span>
 <span class="n">spot_bolt</span><span class="o">.</span><span class="n">setBoltProperties</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">getAllBoltProperties</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">spot_bolt</span><span class="o">.</span><span class="n">setSelectedInstallationFaceMethod</span><span class="p">(</span><span class="n">FaceAppliedTo</span><span class="o">.</span><span class="n">UPPER_FACE</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Length: </span><span class="si">{</span><span class="n">spot_bolt</span><span class="o">.</span><span class="n">getBoltLength</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Orientation: </span><span class="si">{</span><span class="n">spot_bolt</span><span class="o">.</span><span class="n">getSelectedOrientationMethod</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -398,7 +398,12 @@
 </div>
 <section id="output">
 <h2>Output<a class="headerlink" href="#output" title="Link to this heading">#</a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Length: 12.5
+Orientation: BoltOrientation.TREND_PLUNGE
+Trend/plunge: 120.0, -30.0
+Face: FaceAppliedTo.SLOPE_FACE
+Spot bolt count: 1
+Spot bolt count after delete: 0
 </pre></div>
 </div>
 </section>

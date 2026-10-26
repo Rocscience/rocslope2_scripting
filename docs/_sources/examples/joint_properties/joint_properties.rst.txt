@@ -3,6 +3,8 @@ Joint Properties Script Example
 
 This example creates a joint property definition and configures Mohr-Coulomb strength parameters.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Joint Properties Example:
 .. literalinclude:: ../../example_code/joint_properties_example.py
    :language: python

@@ -358,6 +358,7 @@
   <section id="modeler-script-example">
 <h1>Modeler Script Example<a class="headerlink" href="#modeler-script-example" title="Link to this heading">#</a></h1>
 <p>This example shows how to create a new project and import a legacy Swedge / RocPlane / RocTopple file through <code class="docutils literal notranslate"><span class="pre">RocSlope2Modeler</span></code>.</p>
+<p>Download the <a class="reference external" href="https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/Swedge%20Sample.swd7">Swedge Sample.swd7</a> for this example.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <span id="modeler-example"></span><div class="code-block-caption"><span class="caption-text">Code Snippet: Modeler Operations</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rocslope2.RocSlope2Modeler</span> <span class="kn">import</span> <span class="n">RocSlope2Modeler</span>
@@ -373,24 +374,16 @@
 
 <span class="c1"># Create a new blank project</span>
 <span class="n">new_model</span> <span class="o">=</span> <span class="n">modeler</span><span class="o">.</span><span class="n">newProject</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Created new project id: </span><span class="si">{</span><span class="n">new_model</span><span class="o">.</span><span class="n">project_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">new_model</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">saveProject</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Import a legacy Swedge / RocPlane / RocTopple file</span>
 <span class="n">imported_model</span> <span class="o">=</span> <span class="n">modeler</span><span class="o">.</span><span class="n">importFile</span><span class="p">(</span><span class="n">swedge_sample</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Imported project id: </span><span class="si">{</span><span class="n">imported_model</span><span class="o">.</span><span class="n">project_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">imported_model</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">saveProject</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">modeler</span><span class="o">.</span><span class="n">closeProgram</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<section id="output">
-<h2>Output<a class="headerlink" href="#output" title="Link to this heading">#</a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</section>
 </section>
 
 
@@ -431,18 +424,6 @@
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
                 <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
-</ul>
-  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div role="note" aria-label="source link">
