@@ -3,6 +3,8 @@ Spot Bolt Script Example
 
 This example creates a spot bolt on the slope face, assigns bolt properties, edits orientation, then deletes it.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Spot Bolt Example:
 .. literalinclude:: ../../example_code/spot_bolt_example.py
    :language: python

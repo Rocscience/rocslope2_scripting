@@ -358,6 +358,7 @@
   <section id="joint-set-script-example">
 <h1>Joint Set Script Example<a class="headerlink" href="#joint-set-script-example" title="Link to this heading">#</a></h1>
 <p>This example renames a joint set, updates spacing and orientation distribution settings, and creates an individual joint.</p>
+<p>Download the <a class="reference external" href="https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2">blankProject.rocslope2</a> for this example.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <span id="joint-set-example"></span><div class="code-block-caption"><span class="caption-text">Code Snippet: Joint Set</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rocslope2.RocSlope2Modeler</span> <span class="kn">import</span> <span class="n">RocSlope2Modeler</span>
@@ -384,8 +385,8 @@
 <span class="n">joint_set</span><span class="o">.</span><span class="n">setSelectedJointOrientationDistributionMethod</span><span class="p">(</span><span class="n">JointOrientationDistributionMethod</span><span class="o">.</span><span class="n">FISHER</span><span class="p">)</span>
 <span class="n">joint_set</span><span class="o">.</span><span class="n">setSelectedFisherDistOptionMethod</span><span class="p">(</span><span class="n">FisherDistOption</span><span class="o">.</span><span class="n">OPTION_USE_FISHERK</span><span class="p">)</span>
 
-<span class="n">created_joint</span> <span class="o">=</span> <span class="n">joint_set</span><span class="o">.</span><span class="n">createNewIndividualJoint</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Created individual joint id: </span><span class="si">{</span><span class="n">created_joint</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">joint_set</span><span class="o">.</span><span class="n">createNewIndividualJoint</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">joint_set</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Joint count: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">joint_set</span><span class="o">.</span><span class="n">getAllIndividualJoints</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
@@ -396,7 +397,8 @@
 </div>
 <section id="output">
 <h2>Output<a class="headerlink" href="#output" title="Link to this heading">#</a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Primary Joint Set
+Joint count: 116
 </pre></div>
 </div>
 </section>

@@ -3,6 +3,8 @@ Point of Force Application Script Example
 
 This example enables flexure toppling and edits sliding, shearing, and flex block points of force application.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Point of Force Application Example:
 .. literalinclude:: ../../example_code/point_of_force_application_example.py
    :language: python

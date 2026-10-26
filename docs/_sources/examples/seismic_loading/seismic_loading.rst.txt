@@ -3,6 +3,8 @@ Seismic Loading Script Example
 
 This example switches seismic direction conventions and configures trend/plunge and vector coefficients.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Seismic Loading Example:
 .. literalinclude:: ../../example_code/seismic_loading_example.py
    :language: python

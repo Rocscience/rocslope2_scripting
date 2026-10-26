@@ -1,10 +1,6 @@
 Python Script Examples
 ======================
 
-Example models used by these scripts can be found under ``docs/example_code/example_models``.
-
-To refresh the example output sections, run ``docs/example_code/runAllExamples.bat`` (requires RocSlope2).
-
 Model
 -----------------
 .. toctree::

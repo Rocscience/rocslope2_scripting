@@ -3,6 +3,8 @@ Bolt Properties Script Example
 
 This example creates a bolt property and switches between simple bolt force and mechanically anchored support types.
 
+Download the `blankProject.rocslope2 <https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2>`_ for this example.
+
 .. _Bolt Properties Example:
 .. literalinclude:: ../../example_code/bolt_properties_example.py
    :language: python

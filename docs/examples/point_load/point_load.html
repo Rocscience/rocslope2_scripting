@@ -358,6 +358,7 @@
   <section id="point-load-script-example">
 <h1>Point Load Script Example<a class="headerlink" href="#point-load-script-example" title="Link to this heading">#</a></h1>
 <p>This example creates a point load, configures trend/plunge/force and design-standard load action/effect, then deletes it.</p>
+<p>Download the <a class="reference external" href="https://github.com/Rocscience/rocslope2_scripting/blob/main/examples/blankProject.rocslope2">blankProject.rocslope2</a> for this example.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <span id="point-load-example"></span><div class="code-block-caption"><span class="caption-text">Code Snippet: Point Load</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rocslope2.RocSlope2Modeler</span> <span class="kn">import</span> <span class="n">RocSlope2Modeler</span>
@@ -407,7 +408,13 @@
 </div>
 <section id="output">
 <h2>Output<a class="headerlink" href="#output" title="Link to this heading">#</a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Point loads before: 0
+Trend: 180.0
+Plunge: 45.0
+Force magnitude: 25.5
+Apply to: ApplyTo.SLOPE
+Point loads after add: 1
+Point loads after delete: 0
 </pre></div>
 </div>
 </section>
