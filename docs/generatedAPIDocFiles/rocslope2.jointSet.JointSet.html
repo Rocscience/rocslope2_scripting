@@ -542,9 +542,12 @@
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="rocslope2.jointSet.JointSet.JointSet.createNewIndividualJoint">
-<span class="sig-name descname"><span class="pre">createNewIndividualJoint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rocslope2.individualJoint.IndividualJoint.html#rocslope2.individualJoint.IndividualJoint.IndividualJoint" title="rocslope2.individualJoint.IndividualJoint.IndividualJoint"><span class="pre">IndividualJoint</span></a></span></span><a class="headerlink" href="#rocslope2.jointSet.JointSet.JointSet.createNewIndividualJoint" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="rocslope2.jointSet.JointSet.JointSet.addIndividualJoint">
+<span class="sig-name descname"><span class="pre">addIndividualJoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dipDirection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="rocslope2.individualJoint.IndividualJoint.html#rocslope2.individualJoint.IndividualJoint.IndividualJoint" title="rocslope2.individualJoint.IndividualJoint.IndividualJoint"><span class="pre">IndividualJoint</span></a></span></span><a class="headerlink" href="#rocslope2.jointSet.JointSet.JointSet.addIndividualJoint" title="Link to this definition">#</a></dt>
+<dd><p>Dip is [-90, 90] and dip direction is [0, 360]. A joint with that orientation already in the set is rejected.</p>
+<p>Examples:
+<a class="reference internal" href="../examples/joint_set/joint_set.html#joint-set-example"><span class="std std-ref">Code Snippet: Joint Set</span></a></p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rocslope2.jointSet.JointSet.JointSet.deleteIndividualJoint">
@@ -627,7 +630,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.jointSet.JointSet.JointSet.getSelectedFisherDistOptionMethod"><code class="docutils literal notranslate"><span class="pre">JointSet.getSelectedFisherDistOptionMethod()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.jointSet.JointSet.JointSet.setSelectedFisherDistOptionMethod"><code class="docutils literal notranslate"><span class="pre">JointSet.setSelectedFisherDistOptionMethod()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.jointSet.JointSet.JointSet.getAllIndividualJoints"><code class="docutils literal notranslate"><span class="pre">JointSet.getAllIndividualJoints()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.jointSet.JointSet.JointSet.createNewIndividualJoint"><code class="docutils literal notranslate"><span class="pre">JointSet.createNewIndividualJoint()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.jointSet.JointSet.JointSet.addIndividualJoint"><code class="docutils literal notranslate"><span class="pre">JointSet.addIndividualJoint()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rocslope2.jointSet.JointSet.JointSet.deleteIndividualJoint"><code class="docutils literal notranslate"><span class="pre">JointSet.deleteIndividualJoint()</span></code></a></li>
 </ul>
 </li>
